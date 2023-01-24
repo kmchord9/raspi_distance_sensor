@@ -12,7 +12,7 @@ def main():
     volVal = []
 
     # 初期化
-    factory = PiGPIOFactory(host="172.22.102.24")
+    factory = PiGPIOFactory(host=)
     adc_ch0 = MCP3002(channel=1, max_voltage=Vref, pin_factory=factory)
 
     try:
