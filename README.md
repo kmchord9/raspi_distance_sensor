@@ -67,12 +67,14 @@ sudo pigpiod
 ```
 
 自動で行う場合には
-
-/etc/rc.localを編集する
 ```
+sudo raspi-config
+3>P8 Remote GPIOをYes
 
+sudo systemctl enable pigpiod
 ```
 
 ## 参考文献
 [Raspberry Piにシャープ製の赤外線距離センサー”GP2Y0A710K”つけてみた: EeePCの軌跡](https://arkouji.cocolog-nifty.com/blog/2015/12/raspberry-pigp2.html)
 [pigpiodがsystemdサービスで自動起動しない /etc/rc.localに登録して自動起動させる - DreamerDreamのブログ](https://dreamerdream.hateblo.jp/entry/2021/07/13/170000)
+[腹腹開発: pigpiod を systemctl で起動しようとしたら 8888 番ポートがすでに使われていて動作しないと怒られた件](https://fight-tsk.blogspot.com/2020/12/pigpiod-systemctl-8888.html)
